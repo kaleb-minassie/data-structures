@@ -82,7 +82,7 @@ If you followed the instructions in the Project Submission page to set up your d
 
 ```bash
 cp snakes.h snakes.cpp mytest.cpp ~/cs341proj/proj1/
-
+```
 ### Grading Rubric
 The following presents a course rubric. It shows how a submitted project might lose points.
 
