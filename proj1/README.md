@@ -54,16 +54,22 @@ Your task is to implement the game engine using the `Snakes` class. The board is
 You are required to test your program thoroughly using a separate file named `mytest.cpp`, which contains your `Tester` class and all test cases. Each test case must be written in a separate function, and each function should return `true` or `false` based on whether the test passes.
 
 #### Sample Tests
-- Test the constructor for a default board.
-- Test the behavior of the board when snakes or ladders are present.
-- Test edge cases such as incorrect board sizes or invalid moves.
-- Ensure that all dynamic memory is correctly deallocated, using **Valgrind** to detect memory leaks.
+- Testing Snakes Class
+- Test the alternative constructor for a normal case. It must create a default board.
+- Test the alternative constructor for an error case. That would be a board size which is not a square value.
+- Test the function reStart() and check whether it reinitializes the game.
+- Test the function play(...) for a valid move on a ladder.
+- Test the function play(...) for a valid move on a snake.
+- Test the function makeDefaultBoard(...) for a normal case.
+- Test the function makeRandomBoard(...) for a normal case.
+- Test the function makeRandomBoard(...) for an error case.
+- Test the overloaded assignment operator for a normal case.
+- Test the overloaded assignment operator for an edge case.
 
-### Memory Leak Detection
-Use **Valgrind** to check for memory leaks in your implementation:
-```bash
-valgrind ./your_test_program.out
-Ensure there are no memory leaks or segmentation faults.
+### Testing For Memory Leaks / Memory Errors
+Run your test program in valgrind; check that there are no memory leaks or errors.
+Note: If valgrind finds memory errors, compile your code with the -g option to enable debugging support and then re-run valgrind with the -s and --track-origins=yes options. valgrind will show you the line numbers where the errors are detected and can usually tell you which line is causing the error.
+Never ignore warnings. They are a major source of errors in a program.
 
 ### What to Submit
 You must submit the following files to the `proj1` submit directory:
@@ -78,10 +84,15 @@ If you followed the instructions in the Project Submission page to set up your d
 cp snakes.h snakes.cpp mytest.cpp ~/cs341proj/proj1/
 
 ### Grading Rubric
-- **Coding Standards (10%)**: Adhere to the course coding standards.
-- **Test Cases (15%)**: Provide thorough test cases in `mytest.cpp`.
-- **Correctness (75%)**: Your code will be tested against our test cases to verify functionality.
-- **Commit History**: Regular commits are expected to reflect your progress throughout the project.
+The following presents a course rubric. It shows how a submitted project might lose points.
+
+Conforming to coding standards make about 10% of the grade.
+Your test program is worth 50%. If you submit the sample driver program as your test program or no test program is submitted there will be 50% deduction.
+Correctness and completeness of your test cases (mytest.cpp) make about 15% of the grade.
+We have written test cases to test your submission without knowing anything about your code. Therefore, it is extremely important that your submission conforms to the specified requirements. Passing tests make about 30% of the grade.
+There is a 5% deduction for every modification that we need to perform to compile and run your work. For example, if we need to rename your file from myTest.cpp to mytest.cpp the deduction will be applied.
+If the submitted project is in a state that receives the deduction for all above items, it will be graded for efforts. The grade will depend on the required efforts to complete such a work.
+
 
 Good luck, and happy coding!
 
