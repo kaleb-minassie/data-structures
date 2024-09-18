@@ -65,8 +65,7 @@ Use **Valgrind** to check for memory leaks in your implementation:
 valgrind ./your_test_program.out
 Ensure there are no memory leaks or segmentation faults.
 
-## Submission
-
+### What to Submit
 You must submit the following files to the `proj1` submit directory:
 
 - `snakes.h`
