@@ -15,6 +15,7 @@ Search and rescue (SAR) operations are an essential part of responding to disast
 With the recent advances in technologies such as robotics and Artificial Intelligence, many researchers are trying to replace the human team members with robots. The following figure presents an urban search and rescue robot moving across a rubble pile in an exercise by the National Institute of Standards and Technology (NIST).
 
 *Figure from: National Institute of Standards and Technology*
+![image](https://github.com/user-attachments/assets/b90865fb-1730-418f-86e9-b74f04ec0cf7)
 
 A research team is trying to simulate search and rescue operations using a swarm of autonomous robotic devices. The robots communicate with each other and work as a team. The brain of every robot needs to be aware of the status of the whole team. You are assigned the task of developing a data structure that can store a database of all robots during the operation. The data structure runs in the brain of every robot, and it is updated automatically. The decision is made to use a self-balancing Binary Search Tree. The data structure module provides the possibility of organizing data in a regular BST or an AVL tree or a Splay tree. It is also possible to convert the data structure at run time.
 
@@ -29,15 +30,24 @@ A BST on its own can be efficient, but as the dataset increases in size, we can 
 
 ## The AVL Tree
 An AVL tree employs rotations during insertions or deletions to balance a BST. As the name implies, nodes are literally rotated up the tree to keep its structure complete. A complete tree, or ideally a perfect tree, is the most efficient kind of binary tree. Insertions, deletions, and queries all take O(log(n)) time in such a case. AVL trees have two types of rotations, left and right, which are shown in the diagram below:
+![image](https://github.com/user-attachments/assets/89e19eb4-eb9a-4795-852a-850ae4ddf24c)
 
 The variables "x" and "y" refer to 2 specific nodes whereas the subtrees "a", "b", and "c" refer to subtrees (which is just a pointer to a node which may or may not have more children). Note that the pointers to "a", "b", and/or "c" can be null, but "x" nor "y" will never be null.
 
 The key to keeping an AVL tree efficient is when we perform these rotations. A rotation is performed on a node that is imbalanced, and an imbalance occurs when the node's children's heights differ by more than 1. For example, in the above diagram, consider node "y" to be imbalanced in the right rotation and node "x" to be imbalanced in the left rotation. Using a left and right rotation, we can perform four rotation combinations. The imbalance in the following examples occurs on the node with the height of 2 (in red).
 
 - **Single left rotation**: This is a simple case where we can apply a left rotation to the top node to balance the tree.
+- ![image](https://github.com/user-attachments/assets/b9455ea8-938d-4fe0-9097-4f198186698c)
+
 - **Single right rotation**: Similar to the above case, we can apply a single right rotation to the top node to balance the tree.
+- ![image](https://github.com/user-attachments/assets/b98ee949-0b60-4dbf-8c53-147a916c6f61)
+
 - **Double left-right rotation**: This case requires two rotations. The first left rotation transforms the tree into a form we can balance with a second right rotation.
+- ![image](https://github.com/user-attachments/assets/9e443787-e9e5-433e-8447-909d4d72104f)
+
 - **Double right-left rotation**: Likewise, this case uses a right rotation followed by a left rotation.
+- ![image](https://github.com/user-attachments/assets/9e8e1cee-262b-46e3-9f10-020bb6086290)
+
 
 ## The Splay Tree
 Splay trees are binary search trees in which we store the recently accessed node at the root of the tree. Such a tree would be a good choice for a data structure if, in the application, some data points are accessed more frequently than others. Although some work is required in this data structure to bring up the recently accessed data point to the root, once a node is at the root, its next access time is O(1). The amortized analysis of Splay trees reveals that the search operation is O(log n).
@@ -88,7 +98,11 @@ For the Swarm class, you must implement the following methods in `swarm.cpp`:
 - The lowest level of nodes storing the keys should have a height of zero.
 - Follow all coding standards as described in the C++ Coding Standards. Proper indentations and meaningful comments are essential.
   
-The function **Swarm::dumpTree(...)** prints the node information in an in-order traversal. For every node, it prints the ID followed by the height of the node in the Swarm tree. The following example presents a sample output of the `dumpTree()` function for an AVL tree: ((((19224:0)19289:1(19372:0))20201:2((26241:0)27904:1))53002:3(60496:1(93209:0)))
+The function **Swarm::dumpTree(...)** prints the node information in an in-order traversal. For every node, it prints the ID followed by the height of the node in the Swarm tree. The following example presents a sample output of the `dumpTree()` function for an AVL tree: 
+```bash
+((((19224:0)19289:1(19372:0))20201:2((26241:0)27904:1))53002:3(60496:1(93209:0)))
+```
+![image](https://github.com/user-attachments/assets/1c49476e-7448-49ad-a41d-54912aaa4199)
 
 The tree viewer tool can display a graphical representation of this output, facilitating debugging. You can copy and paste the dump output into the viewer.
 
