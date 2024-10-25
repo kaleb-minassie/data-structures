@@ -1,6 +1,6 @@
-# CMSC 341 - Project 2: Search & Rescue Swarm - Fall 2024
+# CMSC 341 - Project 3: Manufacturing Scheduler - Fall 2024
 
-## Due: Tuesday Oct 22, before 9:00 pm
+## Due: Tuesday Nov 12, before 9:00 pm
 
 ## Objectives
 
