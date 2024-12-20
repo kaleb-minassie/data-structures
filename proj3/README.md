@@ -225,5 +225,6 @@ Your test program is worth 50%. If you submit the sample driver program as your 
 Correctness and completeness of your test cases (mytest.cpp) make about 15% of the grade.
 We have written test cases to test your submission without knowing anything about your code. Therefore, it is extremely important that your submission conforms to the specified requirements. Passing tests make about 30% of the grade.
 There is a 5% deduction for every modification that we need to perform to compile and run your work. For example, if we need to rename your file from myTest.cpp to mytest.cpp the deduction will be applied. One can find a non-exhaustive list of problems that cause deductions at the submission page.
+
 If the submitted project is in a state that receives the deduction for all above items, it will be graded for efforts. The grade will depend on the required efforts to complete such a work.
 
